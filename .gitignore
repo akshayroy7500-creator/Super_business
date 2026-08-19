@@ -1,0 +1,32 @@
+# Gradle
+.gradle/
+build/
+*.apk
+*.ap_
+
+# IDE
+.idea/
+.DS_Store
+*.iml
+*.iws
+*.ipr
+
+# API Keys & Secrets
+config/api_keys.json
+.env
+*.keystore
+secrets/
+
+# Dependencies
+/node_modules/
+
+# Logs
+*.log
+logs/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Local properties
+local.properties

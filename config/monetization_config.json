@@ -1,0 +1,89 @@
+{
+  "monetization_models": {
+    "freemium": {
+      "free_tier": {
+        "name": "Starter",
+        "monthly_task_limit": 100,
+        "agent_access": 2,
+        "earnings_limit": 0,
+        "price": 0
+      },
+      "premium_tier": {
+        "name": "Professional",
+        "monthly_task_limit": 10000,
+        "agent_access": "unlimited",
+        "earnings_limit": "unlimited",
+        "price": 9.99
+      },
+      "enterprise_tier": {
+        "name": "Enterprise",
+        "monthly_task_limit": "unlimited",
+        "agent_access": "unlimited",
+        "earnings_limit": "unlimited",
+        "features": [
+          "Dedicated support",
+          "Custom agents",
+          "API access",
+          "Advanced analytics"
+        ],
+        "price": 49.99
+      }
+    },
+    "revenue_streams": [
+      {
+        "name": "Task Completion Bonus",
+        "description": "Users earn money when agents complete tasks",
+        "payout_per_task": 0.50,
+        "frequency": "per_completion"
+      },
+      {
+        "name": "Referral Commission",
+        "description": "Earn from referring other users",
+        "commission_rate": 0.25,
+        "frequency": "per_referral"
+      },
+      {
+        "name": "Ad Revenue",
+        "description": "Passive earnings from ads shown in app",
+        "cpm": 2.50,
+        "frequency": "per_1000_impressions"
+      },
+      {
+        "name": "Premium Subscription",
+        "description": "Monthly recurring revenue",
+        "tiers": [9.99, 49.99],
+        "frequency": "monthly"
+      },
+      {
+        "name": "In-App Purchases",
+        "description": "Premium agents and features",
+        "items": [
+          {"name": "Advanced Agent", "price": 2.99},
+          {"name": "Data Boost", "price": 1.99},
+          {"name": "Priority Support", "price": 4.99}
+        ],
+        "frequency": "per_purchase"
+      }
+    ]
+  },
+  "payment_processors": {
+    "stripe": {
+      "enabled": true,
+      "api_version": "v1",
+      "features": ["subscription", "one_time_charge", "payouts"]
+    },
+    "paypal": {
+      "enabled": true,
+      "features": ["subscription", "one_time_charge"]
+    },
+    "google_play_billing": {
+      "enabled": true,
+      "features": ["in_app_purchase", "subscription"]
+    }
+  },
+  "withdrawal_settings": {
+    "minimum_balance": 10.00,
+    "processing_time_days": 3,
+    "fee_percentage": 0.02
+  }
+}
